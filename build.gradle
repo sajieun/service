@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+// 나의 하위에 있는 모든 프로젝트들은 repository는 maven을 쓰겠다. 라는 의
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+// 부모쪽에는 소스코드가 없기 때문에 이렇게 해도 된다.
+bootJar{
+    enabled = false
+}
+
+jar {
+    enabled = false
+}

@@ -30,17 +30,27 @@ public class LoggerFilter implements Filter {
         var headerNames = req.getHeaderNames();
         var headerValues = new StringBuilder();
 
+        
+
         // 모든 요청 헤더를 순회하며 키-값 쌍으로 로그에 추가한다.
         headerNames.asIterator().forEachRemaining(headerKey -> {
             var headerValue = req.getHeader(headerKey);
             // 예시: authorization-token : ??? , user-agent : ???
-            headerValues.append(headerKey).append(" : ").append(headerValue).append(" , ");
+            headerValues
+                    .append("[")
+                    .append(headerKey)
+                    .append(" : ")
+                    .append(headerValue)
+                    .append("]");
         });
 
         // 요청 본문을 가져와서 문자열로 변환한다.
         var requestBody = new String(req.getContentAsByteArray());
+        var uri = req.getRequestURI();
+        var method = req.getMethod();
+
         // 요청 헤더와 본문을 로그에 출력한다.
-        log.info(">>>> header : {}, body : {}", headerValues, requestBody);
+        log.info(">>>> url : {} , method : {} , header : {}, body : {}",uri, method, headerValues, requestBody);
 
         // response 정보 로깅
         var responseHeaderValues = new StringBuilder();
@@ -48,13 +58,19 @@ public class LoggerFilter implements Filter {
         // 모든 응답 헤더를 순회하며 키-값 쌍으로 로그에 추가한다.
         res.getHeaderNames().forEach(headerKey -> {
             var headerValue = res.getHeader(headerKey);
-            responseHeaderValues.append(headerKey).append(" : ").append(headerValue).append(" , ");
+            responseHeaderValues
+                    .append("[")
+                    .append(headerKey)
+                    .append(" : ")
+                    .append(headerValue)
+                    .append("]");
         });
 
         // 응답 본문을 가져와서 문자열로 변환한다.
         var responseBody = new String(res.getContentAsByteArray());
+
         // 응답 헤더와 본문을 로그에 출력한다.
-        log.info("<<<< header : {} , body : {}", responseHeaderValues, responseBody);
+        log.info("<<<< url : {}, mehotd : {} ,header : {} , body : {}", uri, method, responseHeaderValues, responseBody);
 
         // 응답 본문을 실제 응답 객체에 복사하여 클라이언트에게 전달되도록 한다.
         // 이 작업을 하지 않으면 클라이언트는 응답 본문을 받을 수 없다.

@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.delivery.api.commen.error.ErrorCode;
+import org.delivery.api.commen.error.ErrorCodeIfs;
 
 @Data
 @NoArgsConstructor
@@ -18,9 +20,33 @@ public class Result {
 
     public static Result OK(){
         return Result.builder()
-                .resultCode(200)
-                .resultMessage("OK")
+                .resultCode(ErrorCode.OK.getErrorCode())
+                .resultMessage(ErrorCode.OK.getDescription())
                 .resultDescription("성공")
+                .build();
+    }
+    public static Result ERROR(ErrorCodeIfs errorCodeIfs){
+        return Result.builder()
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
+                .resultDescription("성공")
+                .build();
+    }
+
+//    보통 잘 쓰지 않음
+    public static Result ERROR(ErrorCodeIfs errorCodeIfs, Throwable tx){
+        return Result.builder()
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
+                .resultDescription(tx.getLocalizedMessage())
+                .build();
+    }
+
+    public static Result ERROR(ErrorCodeIfs errorCodeIfs, String description){
+        return Result.builder()
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
+                .resultDescription(description)
                 .build();
     }
 }

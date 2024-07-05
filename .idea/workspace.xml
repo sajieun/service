@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/account/AccountApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/jpa/JpaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/account/AccountEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/account/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/account/model/AccountMeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/objectmapper/ObjectMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/swaggerconfig/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/account/AccountApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/account/AccountApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -23,12 +23,17 @@ public class AccountApiController {
 
 // http://localhost:8080/api/account/me
     @GetMapping("/me")
-    public Api<Object> me(){
+    public Api<AccountMeResponse> me(){
         var response = AccountMeResponse.builder()
                 .name("sajieun")
                 .email("A@gamil.com")
                 .registeredAt(LocalDateTime.now())
                 .build();
-        return Api.ERROR(UserErrorCode.USER_NOT_FOUND, "홍길동이라는 사람 없음");
+
+        var str = "안녕하세요";
+        var age = 0;
+        Integer.parseInt(str);
+
+        return Api.OK(response);
     }
 }

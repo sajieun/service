@@ -30,7 +30,7 @@ public class AccountApiController {
                 .registeredAt(LocalDateTime.now())
                 .build();
 
-        var str = "안녕하세요";
+        var str = "안녕하세용";
         var age = 0;
         Integer.parseInt(str);
 

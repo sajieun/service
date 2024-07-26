@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 // Business는 been으로 될것이다.
 public @interface Business {
 
-    @AliasFor(annotation = Comment.class)
+    @AliasFor(annotation = Service.class)
     String value() default "";
 
 }

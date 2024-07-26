@@ -33,7 +33,7 @@ public class UserEntity extends BaseEntity {
 //    @Enumerated(EnumType.STRING)
 //    원래는 이거였는데 계속 타입 오류 남 밑에 해결
 
-    @Column(columnDefinition = "varchar(50)") // 컬럼 정의를 명시적으로 지정하는 것
+    @Column(columnDefinition = "varchar(50)", nullable = false) // 컬럼 정의를 명시적으로 지정하는 것
     @Enumerated(EnumType.STRING)
     private UserStatus status;
 

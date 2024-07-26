@@ -2,6 +2,7 @@ package org.delivery.api.domain.user.service;
 
 import lombok.RequiredArgsConstructor;
 import org.delivery.api.commen.error.ErrorCode;
+import org.delivery.api.commen.error.UserErrorCode;
 import org.delivery.api.commen.exception.ApiException;
 import org.delivery.db.user.UserEntity;
 import org.delivery.db.user.UserRepository;
@@ -31,5 +32,24 @@ public class UserService {
 
                 })
                 .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT,"User Entity Null"));
+    }
+
+    public UserEntity login(
+            String email,
+            String password
+    ){
+        var entity = getUserWithrow(email,password);
+        return entity;
+    }
+
+    public UserEntity getUserWithrow(
+            String email,
+            String password
+    ){
+        return userRepository.findFirstByEmailAndPasswordAndStatusOrderByIdDesc(
+                email,
+                password,
+                UserStatus.REGISTERED
+        ).orElseThrow(()-> new ApiException(UserErrorCode.USER_NOT_FOUND));
     }
 }

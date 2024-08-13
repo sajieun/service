@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/annotation/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/resolver/UserSessionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/web/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/web/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/business/UserBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/business/UserBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

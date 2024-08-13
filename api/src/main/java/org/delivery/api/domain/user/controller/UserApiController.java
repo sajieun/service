@@ -22,7 +22,6 @@ public class UserApiController {
     @GetMapping("/me")
     public Api<UserResponse> me(){
         var requestContext = Objects.requireNonNull(RequestContextHolder.getRequestAttributes());
-
         var userId = requestContext.getAttribute("userId", RequestAttributes.SCOPE_REQUEST);
 
         var response = userBusiness.me(Long.parseLong(userId.toString()));

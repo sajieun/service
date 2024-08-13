@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/TokenErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/TokenErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/intercetor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/intercetor/AuthorizationInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/annotation/UserSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/resolver/UserSessionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +80,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>

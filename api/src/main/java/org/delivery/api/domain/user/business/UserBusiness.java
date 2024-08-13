@@ -49,4 +49,10 @@ public class UserBusiness {
         var userEntity = userService.login(request.getEmail(),request.getPassword());
         return tokenBusiness.issueToken(userEntity);
     }
+
+    public UserResponse me(Long userId) {
+        var userEntity = userService.getUserWithrow(userId);
+        var response = userConverter.toResponse(userEntity);
+        return response;
+    }
 }

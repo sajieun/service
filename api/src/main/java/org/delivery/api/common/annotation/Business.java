@@ -1,6 +1,5 @@
-package org.delivery.api.commen.annotation;
+package org.delivery.api.common.annotation;
 
-import org.hibernate.annotations.Comment;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Service;
 

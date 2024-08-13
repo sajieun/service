@@ -1,7 +1,9 @@
 package org.delivery.api.domain.user.business;
 
 import lombok.RequiredArgsConstructor;
-import org.delivery.api.commen.annotation.Business;
+import org.delivery.api.common.annotation.Business;
+import org.delivery.api.domain.token.business.TokenBusiness;
+import org.delivery.api.domain.token.controller.model.TokenResponse;
 import org.delivery.api.domain.user.controller.model.UserLoginRequest;
 import org.delivery.api.domain.user.controller.model.UserRegisterRequest;
 import org.delivery.api.domain.user.controller.model.UserResponse;
@@ -14,6 +16,7 @@ public class UserBusiness {
 
     private final UserService userService;
     private final UserConverter userConverter;
+    private final TokenBusiness tokenBusiness;
 
     /**
      * 사용자에 대한 가입처리 로직
@@ -42,10 +45,8 @@ public class UserBusiness {
     * 3. token 생성
     * 3. token response
 * */
-    public UserResponse login(UserLoginRequest request) {
+    public TokenResponse login(UserLoginRequest request) {
         var userEntity = userService.login(request.getEmail(),request.getPassword());
-
-        // 사용자 없으면 throw
-        return userConverter.toResponse(userEntity);
+        return tokenBusiness.issueToken(userEntity);
     }
 }

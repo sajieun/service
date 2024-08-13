@@ -1,8 +1,7 @@
-package org.delivery.api.commen.error;
+package org.delivery.api.common.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.springframework.http.HttpStatus;
 
 /*
 *  User의 경우 100번대 에러코드 사용

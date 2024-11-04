@@ -6,7 +6,7 @@ import org.delivery.api.common.error.UserErrorCode;
 import org.delivery.api.common.exception.ApiException;
 import org.delivery.db.user.UserEntity;
 import org.delivery.db.user.UserRepository;
-import org.delivery.db.user.enums.UserStatus;
+import org.delivery.db.store.enums.StoreStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +26,7 @@ public class UserService {
     public UserEntity register(UserEntity userEntity){
         return Optional.ofNullable(userEntity)
                 .map(it ->{
-                    userEntity.setStatus(UserStatus.REGISTERED);
+                    userEntity.setStatus(StoreStatus.REGISTERED);
                     userEntity.setRegisteredAt(LocalDateTime.now());
                     return userRepository.save(userEntity);
 
@@ -49,7 +49,7 @@ public class UserService {
         return userRepository.findFirstByEmailAndPasswordAndStatusOrderByIdDesc(
                 email,
                 password,
-                UserStatus.REGISTERED
+                StoreStatus.REGISTERED
         ).orElseThrow(()-> new ApiException(UserErrorCode.USER_NOT_FOUND));
     }
 
@@ -58,7 +58,7 @@ public class UserService {
     ){
         return userRepository.findFirstByIdAndStatusOrderByIdDesc(
                 userId,
-                UserStatus.REGISTERED
+                StoreStatus.REGISTERED
         ).orElseThrow(()-> new ApiException(UserErrorCode.USER_NOT_FOUND));
     }
 }

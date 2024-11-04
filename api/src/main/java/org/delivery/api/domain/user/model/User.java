@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.delivery.db.user.enums.UserStatus;
+import org.delivery.db.store.enums.StoreStatus;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +22,7 @@ public class User {
 
     private String password;
 
-    private UserStatus status;
+    private StoreStatus status;
 
     private String address;
 

@@ -1,13 +1,10 @@
 package org.delivery.api.domain.user.controller.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.delivery.db.user.enums.UserStatus;
+import org.delivery.db.store.enums.StoreStatus;
 
 import java.time.LocalDateTime;
 // 요청될때 보이는 로그(log)
@@ -23,7 +20,7 @@ public class UserResponse {
 
     private String email;
 
-    private UserStatus status;
+    private StoreStatus status;
 
     private String address;
 

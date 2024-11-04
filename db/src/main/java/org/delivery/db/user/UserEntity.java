@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
-import org.delivery.db.user.enums.UserStatus;
+import org.delivery.db.store.enums.StoreStatus;
 
 import java.time.LocalDateTime;
 
@@ -35,7 +35,7 @@ public class UserEntity extends BaseEntity {
 
     @Column(columnDefinition = "varchar(50)", nullable = false) // 컬럼 정의를 명시적으로 지정하는 것
     @Enumerated(EnumType.STRING)
-    private UserStatus status;
+    private StoreStatus status;
 
     @Column(length = 150, nullable = false)
     private String address;

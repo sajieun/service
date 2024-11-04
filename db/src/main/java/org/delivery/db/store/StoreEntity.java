@@ -1,14 +1,15 @@
 package org.delivery.db.store;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
+
+import org.delivery.db.store.enums.StoreCategory;
+import org.delivery.db.store.enums.StoreStatus;
 
 import java.math.BigDecimal;
 
@@ -24,14 +25,16 @@ public class StoreEntity extends BaseEntity {
     @Column(length = 100, nullable = false)
     private String name;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 150, nullable = false)
     private String address;
 
     @Column(length = 50, nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING) // 문자로 들어갈 수 있도록
+    private StoreStatus status;
 
-    @Column(length = 45, nullable = false)
-    private String category;
+    @Column(length = 50, nullable = false)
+    @Enumerated(EnumType.STRING) // 문자로 들어갈 수 있도록
+    private StoreCategory category;
 
     private double star;
 

@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/StoreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/enums/StoreCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/enums/StoreStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/business/StoreBusiness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/controller/StoreApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/controller/StoreOpenApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/controller/model/StoreRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/controller/model/StoreResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/converter/StoreConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/service/StoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/model/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/model/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/StoreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/StoreEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/enums/UserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/user/enums/UserStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +138,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.delivery.api.domain.store.controller" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.delivery.api.commen.error" />
       <recent name="org.delivery.api.domain.user.controller" />

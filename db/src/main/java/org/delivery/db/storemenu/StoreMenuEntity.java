@@ -2,10 +2,8 @@ package org.delivery.db.storemenu;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
 import org.delivery.db.storemenu.enums.StoreMenuStatus;
 
@@ -16,6 +14,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
+@SuperBuilder
 @Table(name = "store_menu")
 public class StoreMenuEntity extends BaseEntity {
 

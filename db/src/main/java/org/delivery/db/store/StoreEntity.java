@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-@SuperBuilder
+@SuperBuilder // 자식 클래스 간의 필드와 메서드를 공유할 때
 @Entity
 @Table(name = "store")
 public class StoreEntity extends BaseEntity {
@@ -38,7 +38,7 @@ public class StoreEntity extends BaseEntity {
 
     private double star;
 
-    @Column(length = 200, nullable = false)
+    @Column(length = 300, nullable = false)
     private String thumbnailUrl;
 
     @Column(precision = 11, scale = 4,nullable = false)

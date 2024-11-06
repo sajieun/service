@@ -1,4 +1,6 @@
 package org.delivery.db.userorder;
 
-public interface UserOrderRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserOrderRepository extends JpaRepository<UserOrderEntity,Long> {
 }

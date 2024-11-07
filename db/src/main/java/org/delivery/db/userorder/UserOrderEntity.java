@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 public class UserOrderEntity extends BaseEntity {
 
     @Column(nullable = false)
-    private Long user_id; // userId에 있는 1:n 관계
+    private Long userId; // userId에 있는 1:n 관계
 
     @Column(length = 50,nullable = false)
     @Enumerated(EnumType.STRING)
@@ -31,14 +31,14 @@ public class UserOrderEntity extends BaseEntity {
     @Column(precision = 11, scale = 4, nullable = false)
     private BigDecimal amount;
 
-    private LocalDateTime ordered_at;
+    private LocalDateTime orderedAt;
 
-    private LocalDateTime accepted_at;
+    private LocalDateTime acceptedAt;
 
-    private LocalDateTime cooking_started_at;
+    private LocalDateTime cookingStartedAt;
 
-    private LocalDateTime delivery_started_at;
+    private LocalDateTime deliveryStartedAt;
 
-    private LocalDateTime received_at;
+    private LocalDateTime receivedAt;
 
 }

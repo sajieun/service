@@ -16,14 +16,22 @@ import java.util.Optional;
 @Service
 public class UserOrderService {
 
-    private UserOrderRepository userOrderRepository;
+    private final UserOrderRepository userOrderRepository;
+
+    public UserOrderEntity getUserOrderWithOutStatusWithThrow(
+            Long id,
+            Long userId
+    ){
+        return userOrderRepository.findAllByIdAndUserId(id, userId)
+                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+    }
 
     public UserOrderEntity getUserOrderWithThrow(
             Long id,
             Long userId
     ){
-        return userOrderRepository.findAllByIdAndStatusAndUserId(id, UserOrderStatus.REGISTERED,userId)
-                .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
+        return userOrderRepository.findAllByIdAndStatusAndUserId(id, UserOrderStatus.REGISTERED, userId)
+                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
     }
 
     public List<UserOrderEntity> getUserOrderList(Long userId){
@@ -37,18 +45,19 @@ public class UserOrderService {
     // 현재 진행중인 내역
     public List<UserOrderEntity> current(Long userId){
         return getUserOrderList(
-        userId,
-        List.of(
-                UserOrderStatus.ORDER,
-                UserOrderStatus.COOKING,
-                UserOrderStatus.DELIVERY,
-                UserOrderStatus.ACCEPT
-            )
+                userId,
+                List.of(
+                        UserOrderStatus.ORDER,
+                        UserOrderStatus.COOKING,
+                        UserOrderStatus.DELIVERY,
+                        UserOrderStatus.ACCEPT
+                )
         );
     }
 
+
     // 과거 주문한 내역
-    public List<UserOrderEntity> hisotry(Long userId){
+    public List<UserOrderEntity> history(Long userId){
         return getUserOrderList(
                 userId,
                 List.of(
@@ -57,12 +66,13 @@ public class UserOrderService {
         );
     }
 
+
     // 주문 (create)
     public UserOrderEntity order(
             UserOrderEntity userOrderEntity
     ){
         return Optional.ofNullable(userOrderEntity)
-                .map( it -> {
+                .map(it ->{
                     it.setStatus(UserOrderStatus.ORDER);
                     it.setOrderedAt(LocalDateTime.now());
                     return userOrderRepository.save(it);
@@ -87,6 +97,7 @@ public class UserOrderService {
         userOrderEntity.setCookingStartedAt(LocalDateTime.now());
         return setStatus(userOrderEntity, UserOrderStatus.COOKING);
     }
+
 
     // 배달 시작
     public UserOrderEntity delivery(UserOrderEntity userOrderEntity){

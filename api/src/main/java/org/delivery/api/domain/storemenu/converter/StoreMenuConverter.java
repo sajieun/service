@@ -10,6 +10,7 @@ import org.delivery.db.storemenu.StoreMenuEntity;
 import org.delivery.db.storemenu.StoreMenuRepository;
 
 import javax.swing.text.html.Option;
+import java.util.List;
 import java.util.Optional;
 
 @Converter
@@ -49,5 +50,13 @@ public class StoreMenuConverter {
                             .build();
                 })
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
+    }
+
+    public List<StoreMenuResponse> toResponse(
+        List<StoreMenuEntity> list
+    ){
+        return list.stream()
+                .map(this::toResponse)
+                .toList();
     }
 }

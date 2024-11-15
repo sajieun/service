@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/StoreAdminApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/jpa/JpaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/business/StoreUserBusiness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/controller/StoreUserOpenApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/controller/model/StoreUserRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/controller/model/StoreUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/converter/StoreUserConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/service/StoreUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/store/StoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/enums/StoreUserStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +87,16 @@
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
                 <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
                 <item name="org.springframework.boot:spring-boot-starter-security:3.2.5" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="org.springframework.security:spring-security-config:6.2.4" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="org.springframework.security:spring-security-core:6.2.4" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="service" type="f1a62948:ProjectNode" />
+                <item name="store-admin" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="org.springframework.boot:spring-boot-starter-security:3.2.5" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="org.springframework.security:spring-security-web:6.2.4" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
             </expand>
@@ -98,8 +111,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -148,7 +161,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jieun/intelliJ/Spring/service/store-admin/src/main/resources",
+    "last_opened_file_path": "/Users/jieun/intelliJ/Spring/service/store-admin/src/main/java/org/delivery/storeadmin",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -157,6 +170,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin" />
+      <recent name="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/common" />
       <recent name="$PROJECT_DIR$/store-admin/src/main/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

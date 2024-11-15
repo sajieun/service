@@ -9,5 +9,5 @@ public enum StoreUserRole {
     USER("일반유저"),
     ;
 
-    private String description;
+    private final String description;
 }

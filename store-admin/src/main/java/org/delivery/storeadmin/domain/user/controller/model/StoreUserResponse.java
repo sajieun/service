@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.delivery.db.store.enums.StoreStatus;
 import org.delivery.db.storeuser.enums.StoreUserRole;
+import org.delivery.db.storeuser.enums.StoreUserStatus;
 
 import java.time.LocalDateTime;
 
@@ -36,7 +37,7 @@ public class StoreUserResponse {
         @JsonIgnore
         private String password;
 
-        private StoreStatus status;
+        private StoreUserStatus status;
 
         private StoreUserRole role;
 

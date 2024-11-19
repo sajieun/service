@@ -9,6 +9,7 @@ import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
 import org.delivery.db.store.enums.StoreStatus;
 import org.delivery.db.storeuser.enums.StoreUserRole;
+import org.delivery.db.storeuser.enums.StoreUserStatus;
 
 import java.time.LocalDateTime;
 
@@ -33,7 +34,7 @@ public class StoreUserEntity extends BaseEntity {
 
     @Column(length = 50,nullable = false)
     @Enumerated(EnumType.STRING)
-    private StoreStatus status;
+    private StoreUserStatus status;
 
     @Column(length = 50,nullable = false)
     @Enumerated(EnumType.STRING)

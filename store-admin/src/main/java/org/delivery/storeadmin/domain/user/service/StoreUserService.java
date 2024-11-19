@@ -24,7 +24,7 @@ public class StoreUserService {
     public StoreUserEntity register(
             StoreUserEntity storeUserEntity
     ){
-        storeUserEntity.setStatus(StoreStatus.REGISTERED);
+        storeUserEntity.setStatus(StoreUserStatus.REGISTERED);
         storeUserEntity.setPassword(passwordEncoder.encode(storeUserEntity.getPassword()));
         storeUserEntity.setRegisteredAt(LocalDateTime.now());
 

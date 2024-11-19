@@ -1,5 +1,6 @@
 package org.delivery.storeadmin.domain.user.controller.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -32,6 +33,7 @@ public class StoreUserResponse {
         private Long id;
         private String email;
 
+        @JsonIgnore
         private String password;
 
         private StoreStatus status;

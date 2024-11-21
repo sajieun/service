@@ -38,7 +38,11 @@ public class SecurityConfig {
                             .anyRequest().authenticated()
                     ;
                 })
-                .formLogin(Customizer.withDefaults())
+//                .formLogin(Customizer.withDefaults())
+                .formLogin(from -> from
+                        .defaultSuccessUrl("/main", true)
+                        .permitAll())
+
         ;
         return httpSecurity.build();
     }

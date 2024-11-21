@@ -20,12 +20,11 @@ public class AuthorizationService implements UserDetailsService {
         var storeUserEntity = storeUserService.getRegisterUser(username);
 
         return storeUserEntity.map(it -> {
-                    var user = User.builder()
+                    return User.builder()
                             .username(it.getEmail())
                             .password(it.getPassword())
                             .roles(it.getRole().toString())
                             .build();
-                    return user;
                 })
                 .orElseThrow(() -> new UsernameNotFoundException(username));
     }

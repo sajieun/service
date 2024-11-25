@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/presentation/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/order/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/model/UserSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/controller/StoreUserApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/org/delivery/db/storeuser/StoreUserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/AuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/AuthorizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/converter/StoreUserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/converter/StoreUserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/presentation/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/presentation/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +88,8 @@
         <option value="AnnotationType" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>

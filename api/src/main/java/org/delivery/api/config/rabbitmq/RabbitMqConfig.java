@@ -25,17 +25,13 @@ public class RabbitMqConfig {
         return new Queue("delivery.queue");
     }
 
-    public Binding binding(
-            DirectExchange directExchange,
-            Queue queue
-    ){
-        return BindingBuilder
-                .bind(queue)
-                .to(directExchange)
-                .with("delivery.key");
+    @Bean
+    public Binding binding(DirectExchange directExchange, Queue queue){
+        return BindingBuilder.bind(queue).to(directExchange).with("delivery.key");
     }
 
-    // end queue
+
+    /// end queue 설정
 
     @Bean
     public RabbitTemplate rabbitTemplate(
@@ -43,14 +39,12 @@ public class RabbitMqConfig {
             MessageConverter messageConverter
     ){
         var rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(messageConverter); // object를 json 형태로 -> json 형태를 object 형태로
+        rabbitTemplate.setMessageConverter(messageConverter);
         return rabbitTemplate;
     }
 
-    public MessageConverter messageConverter(
-            ObjectMapper objectMapper
-    ){
+    @Bean
+    public MessageConverter messageConverter(ObjectMapper objectMapper){
         return new Jackson2JsonMessageConverter(objectMapper);
     }
-
 }

@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/model/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/controller/StoreUserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/AuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/authorization/AuthorizationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/converter/StoreUserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/user/converter/StoreUserConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/presentation/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/presentation/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/rabbitmq/RabbitMqConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,37 +36,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="service" type="f1a62948:ProjectNode" />
-                <item name="store-admin" type="2d1252cf:ModuleNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="service" type="f1a62948:ProjectNode" />
-                <item name="store-admin" type="2d1252cf:ModuleNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="service" type="f1a62948:ProjectNode" />
-                <item name="store-admin" type="2d1252cf:ModuleNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="service" type="f1a62948:ProjectNode" />
-                <item name="store-admin" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.springframework.boot:spring-boot-starter-thymeleaf:3.2.5" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="service" type="f1a62948:ProjectNode" />
-                <item name="store-admin" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.springframework.boot:spring-boot-starter-thymeleaf:3.2.5" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.thymeleaf:thymeleaf-spring6:3.1.2.RELEASE" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />

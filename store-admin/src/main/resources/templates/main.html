@@ -7,12 +7,27 @@
 <body>
 <h1>환영합니다!</h1>
 
-<div>
-    <strong>사용자 ID:</strong> <span th:text="${userId}"></span><br>
-    <strong>이메일:</strong> <span th:text="${email}"></span><br>
-    <strong>상점 이름:</strong> <span th:text="${storeName}"></span><br>
-    <strong>롤:</strong> <span th:text="${role}"></span><br>
-</div>
-<strong>정보:</strong> <span th:text="${authDetails}"></span><br>
+<!--<div>-->
+<!--    <strong>사용자 ID:</strong> <span th:text="${userId}"></span><br>-->
+<!--    <strong>이메일:</strong> <span th:text="${email}"></span><br>-->
+<!--    <strong>상점 이름:</strong> <span th:text="${storeName}"></span><br>-->
+<!--    <strong>롤:</strong> <span th:text="${role}"></span><br>-->
+<!--</div>-->
+<!--<strong>정보:</strong> <span th:text="${authDetails}"></span><br>-->
 </body>
+
+<script>
+    const url = "http://localhost:8081/api/sse/connect"; //  접속주소
+    const eventSource = new EventSource(url);           // sse 연결
+
+    eventSource.onopen = event => {
+        console.log("sse connection")
+        console.log(event)
+    }
+
+    eventSource.onmessage = event => {
+        console.log("receive data");
+        console.log(event)
+    }
+</script>
 </html>

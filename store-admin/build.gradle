@@ -24,11 +24,15 @@ repositories {
 
 dependencies {
     implementation project(':db') // api라는 애가 데이터베이스 라는 애를 가져다가 쓰겠다 라는 뜻
+    implementation project(':common')
+
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     // thymeleaf

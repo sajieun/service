@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     implementation project(':db') // api라는 애가 데이터베이스 라는 애를 가져다가 쓰겠다 라는 뜻
+    implementation project(':common')
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok'

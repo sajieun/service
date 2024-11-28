@@ -24,6 +24,9 @@ public class UserOrderEntity extends BaseEntity {
     @Column(nullable = false)
     private Long userId; // userId에 있는 1:n 관계
 
+    @Column(nullable = false)
+    private Long storeId;
+
     @Column(length = 50,nullable = false)
     @Enumerated(EnumType.STRING)
     private UserOrderStatus status;

@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UserOrderMessage {
 
-    private Long userOderId;
+    private Long userOrderId;
 
 }

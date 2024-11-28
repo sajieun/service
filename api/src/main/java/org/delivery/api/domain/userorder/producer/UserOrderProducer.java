@@ -22,7 +22,7 @@ public class UserOrderProducer {
 
     public void sendOrder(Long userOrderId){
         var message = UserOrderMessage.builder()
-                .userOderId(userOrderId)
+                .userOrderId(userOrderId)
                 .build();
         producer.producer(EXCHANGE,ROUTE_KEY,message);
     };

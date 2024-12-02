@@ -11,11 +11,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 @Component
 public class SseConnectionPool implements ConnectionPoolIfs<String,UserSseConnection> {
-
-    private final Map<String, UserSseConnection> connectionPool = new ConcurrentHashMap<>();
+    private static final Map<String, UserSseConnection> connectionPool = new ConcurrentHashMap<>();
 
     @Override
-    public void addSession(String uniqueKey,UserSseConnection userSseConnection) {
+    public void addSession(String uniqueKey, UserSseConnection userSseConnection) {
         connectionPool.put(uniqueKey, userSseConnection);
     }
 

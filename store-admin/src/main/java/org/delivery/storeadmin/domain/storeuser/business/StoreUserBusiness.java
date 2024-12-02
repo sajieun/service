@@ -1,16 +1,18 @@
-package org.delivery.storeadmin.domain.user.business;
+package org.delivery.storeadmin.domain.storeuser.business;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.delivery.db.store.StoreRepository;
 import org.delivery.db.store.enums.StoreStatus;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserRegisterRequest;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserResponse;
-import org.delivery.storeadmin.domain.user.converter.StoreUserConverter;
-import org.delivery.storeadmin.domain.user.service.StoreUserService;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserRegisterRequest;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserResponse;
+import org.delivery.storeadmin.domain.storeuser.converter.StoreUserConverter;
+import org.delivery.storeadmin.domain.storeuser.service.StoreUserService;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class StoreUserBusiness {
 
     private final StoreUserConverter storeUserConverter;
@@ -22,6 +24,7 @@ public class StoreUserBusiness {
     public StoreUserResponse register(
             StoreUserRegisterRequest request
     ){
+        log.info("Registering store user for store: {}", request.getStoreName());
         var storeEntity = storeRepository.findFirstByNameAndStatusOrderByIdDesc(request.getStoreName(), StoreStatus.REGISTERED);
 
         var entity = storeUserConverter.toEntity(request, storeEntity.get());
@@ -29,6 +32,8 @@ public class StoreUserBusiness {
         var newEntity = storeUserService.register(entity);
 
         var response = storeUserConverter.toResponse(newEntity, storeEntity.get());
+
+        log.info("Store user registered successfully: {}", newEntity);
 
         return response;
     }

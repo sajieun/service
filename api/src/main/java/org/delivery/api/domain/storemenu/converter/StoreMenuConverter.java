@@ -33,22 +33,18 @@ public class StoreMenuConverter {
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
 
-    public StoreMenuResponse toResponse(
-            StoreMenuEntity storeMenuEntity
-    ){
+    public StoreMenuResponse toResponse(StoreMenuEntity storeMenuEntity) {
         return Optional.ofNullable(storeMenuEntity)
-                .map(it -> {
-                    return StoreMenuResponse.builder()
-                            .id(storeMenuEntity.getId())
-                            .storeId(storeMenuEntity.getStoreId())
-                            .name(storeMenuEntity.getName())
-                            .amount(storeMenuEntity.getAmount())
-                            .status(storeMenuEntity.getStatus())
-                            .thumbnailUrl(storeMenuEntity.getThumbnailUrl())
-                            .likeCount(storeMenuEntity.getLikeCount())
-                            .sequence(storeMenuEntity.getSequence())
-                            .build();
-                })
+                .map(it -> StoreMenuResponse.builder()
+                        .id(it.getId())
+                        .storeId(it.getStoreId())
+                        .name(it.getName())
+                        .amount(it.getAmount())
+                        .status(it.getStatus())
+                        .thumbnailUrl(it.getThumbnailUrl())
+                        .likeCount(it.getLikeCount())
+                        .sequence(it.getSequence())
+                        .build())
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
 

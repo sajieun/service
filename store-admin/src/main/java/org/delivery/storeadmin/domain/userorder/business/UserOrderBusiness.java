@@ -45,9 +45,7 @@ public class UserOrderBusiness {
                 .map(userOrderMenuEntity ->{
                     return storeMenuService.getStoreMenuWithThrow(userOrderMenuEntity.getStoreMenuId());
                 })
-                .map(storeMenuEntity ->{
-                    return storeMenuConverter.toResponse(storeMenuEntity);
-                })
+                .map(storeMenuConverter::toResponse)
                 .collect(Collectors.toList());
 
         var userOrderResponse = userOrderConverter.toResponse(userOrderEntity);

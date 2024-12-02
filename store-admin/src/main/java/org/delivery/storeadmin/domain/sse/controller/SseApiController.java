@@ -27,14 +27,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SseApiController {
 
     private final SseConnectionPool sseConnectionPool;
-
     private final ObjectMapper objectMapper;
 
     @GetMapping(path = "/connect", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public ResponseBodyEmitter connect(
             @Parameter(hidden = true)
             @AuthenticationPrincipal UserSession userSession
-            ){
+    ){
         log.info("login user {}", userSession);
 
         var userSseConnection = UserSseConnection.connect(
@@ -44,6 +43,7 @@ public class SseApiController {
         );
 
         sseConnectionPool.addSession(userSseConnection.getUniqueKey(), userSseConnection);
+
         return userSseConnection.getSseEmitter();
     }
 
@@ -55,7 +55,7 @@ public class SseApiController {
         var userSseConnection = sseConnectionPool.getSession(userSession.getStoreId().toString());
 
         Optional.ofNullable(userSseConnection)
-                .ifPresent(it -> {
+                .ifPresent(it ->{
                     it.sendMessage("hello world");
                 });
     }

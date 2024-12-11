@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 따로 설정하지 않아도 이렇게 쓰면 자동으로 설정이 된다.
-@Configuration
+/*@Configuration
 public class ObjectMapperConfig {
 
     @Bean
@@ -33,4 +33,4 @@ public class ObjectMapperConfig {
 
         return objectMapper;
     }
-}
+}*/

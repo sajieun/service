@@ -39,5 +39,7 @@ class ObjectMapperConfig {
 
             propertyNamingStrategy = PropertyNamingStrategies.SNAKE_CASE // 스네이크 케이스
         }
+
+        return objectMapper
     }
 }

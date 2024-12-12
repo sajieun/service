@@ -1,6 +1,6 @@
 package org.delivery.api.config.web
 
-import org.delivery.api.interceptor.AuthorizationInterceptor
+import org.delivery.api.intercetor.AuthorizationInterceptor
 import org.delivery.api.resolver.UserSessionResolver
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.method.support.HandlerMethodArgumentResolver

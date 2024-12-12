@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15561262-4c9c-428f-9264-5006ee57ef09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/ApiApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/domain/temp/TempApiController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/api/Api.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/api/Result.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/error/ErrorCode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/error/ErrorCodeIfs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/error/TokenErrorCode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/org/delivery/common/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/api/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/api/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/api/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/api/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/ErrorCodeIfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/ErrorCodeIfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/TokenErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/TokenErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/UserErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/error/UserErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/exception/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/exception/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/exception/ApiExceptionIfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/common/exception/ApiExceptionIfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/converter/StoreConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/converter/StoreConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/store/service/StoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/storemenu/converter/StoreMenuConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/storemenu/converter/StoreMenuConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/storemenu/service/StoreMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/storemenu/service/StoreMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/business/TokenBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/business/TokenBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/converter/TokenConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/converter/TokenConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/helper/JwtTokenHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/helper/JwtTokenHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/token/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/converter/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/converter/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userorder/service/UserOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userorder/service/UserOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userordermenu/service/UserOrderMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userordermenu/service/UserOrderMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/exceptionhandler/GlobalExceptionHanlder.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/exceptionhandler/GlobalExceptionHanlder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/intercetor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/intercetor/AuthorizationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +101,12 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="package-info" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="package-info" />
+        <option value="Kotlin Annotation" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
@@ -160,6 +186,9 @@
       <recent name="org.delivery.storeadmin.domain.sse.connection" />
       <recent name="org.delivery.common" />
       <recent name="org.delivery.api.domain.store.controller" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="org.delivery.common.error" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.delivery.db.storeuser.enums" />

@@ -1,11 +1,14 @@
+/*
 package org.delivery.api.common.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+*/
 /*
 *  Token의 경우 2000번대 에러코드 사용
- */
+ *//*
+
 @AllArgsConstructor
 @Getter
 public enum TokenErrorCode implements ErrorCodeIfs{
@@ -27,3 +30,4 @@ public enum TokenErrorCode implements ErrorCodeIfs{
     private final String description;
 
 }
+*/

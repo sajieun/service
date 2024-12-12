@@ -1,3 +1,4 @@
+/*
 package org.delivery.api.common.error;
 
 public interface ErrorCodeIfs {
@@ -8,3 +9,4 @@ public interface ErrorCodeIfs {
 
     String getDescription();
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package org.delivery.api.config.web;
 
 
@@ -49,3 +50,4 @@ public class WebConfig implements WebMvcConfigurer {
         resolvers.add(userSessionResolver);
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package org.delivery.api.config.rabbitmq;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,4 +48,4 @@ public class RabbitMqConfig {
     public MessageConverter messageConverter(ObjectMapper objectMapper){
         return new Jackson2JsonMessageConverter(objectMapper);
     }
-}
+}*/

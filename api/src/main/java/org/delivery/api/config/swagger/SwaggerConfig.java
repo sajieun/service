@@ -1,3 +1,4 @@
+/*
 package org.delivery.api.config.swagger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,3 +14,4 @@ public class SwaggerConfig {
         return new ModelResolver(objectMapper);
     }
 }
+*/
